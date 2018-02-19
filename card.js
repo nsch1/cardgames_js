@@ -1,5 +1,3 @@
-'use strict';
-
 class Card {
   constructor(suit, rank) {
     this.suit = suit;
@@ -23,9 +21,5 @@ class Card {
     }
   }
 }
-
-let test = new Card("hearts", 10);
-
-console.log(`${test.getRankName()} of ${test.getSuit()}`)
 
 module.exports = Card;
