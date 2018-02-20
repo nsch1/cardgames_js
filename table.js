@@ -14,6 +14,10 @@ class Table {
     this.players.push(new Player(name));
     return this.players[this.players.length-1];
   }
+
+  receiveCard(card) {
+    this.field.push(card);
+  }
 }
 /*
 let test = new Table;
