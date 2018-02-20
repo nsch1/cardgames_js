@@ -1,4 +1,4 @@
-'use strict:'
+'use strict';
 
 const Card = require('./card.js');
 const Player = require('./player.js');
@@ -39,14 +39,6 @@ class Dealer {
   shuffleDeck() {
     shuffle(this.deck);
   }
-
-
 }
 
-let test = new Dealer;
-
-console.log(test.deck[0]);
-
-test.shuffleDeck();
-
-console.log(test.deck[0]);
+module.exports = Dealer;
