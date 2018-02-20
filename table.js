@@ -9,4 +9,15 @@ class Table {
     this.players = [];
     this.field = [];
   }
+
+  seatPlayer(name) {
+    this.players.push(new Player(name));
+    return this.players[this.players.length-1];
+  }
 }
+/*
+let test = new Table;
+let dealer = test.dealer;
+
+console.log(test.seatPlayer("test"));
+*/
