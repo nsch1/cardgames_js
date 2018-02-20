@@ -40,13 +40,17 @@ class Dealer {
     shuffle(this.deck);
   }
 
-  dealCards(amount) {
+  dealCards(amount = 1) {
     let currentPlayers = this.currentTable.players
     for (let i = 0; i < amount; i++) {
       for (let p = 0; p < currentPlayers.length; p++) {
         dealCard.bind(this)(currentPlayers[p]);
       }
     }
+  }
+
+  burnCards(amount = 1) {
+    this.deck.pop();
   }
 }
 
