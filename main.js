@@ -23,3 +23,13 @@ console.log(dealer.deck[dealer.deck.length-1]);
 dealer.playCards();
 
 console.log(test.field);
+
+player.setChips(100);
+
+console.log(player.chips);
+
+console.log(player.betChips(101));
+
+console.log(player.chips);
+
+player.betChips(80);

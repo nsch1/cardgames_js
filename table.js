@@ -8,6 +8,7 @@ class Table {
     this.dealer = new Dealer;
     this.players = [];
     this.field = [];
+    this.pot;
   }
 
   seatPlayer(name) {
