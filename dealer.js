@@ -49,7 +49,13 @@ class Dealer {
     }
   }
 
-  burnCards(amount = 1) {
+  playCards(amount = 1) {
+    for (let i = 0; i < amount; i++) {
+      dealCard.bind(this)(this.currentTable);
+    }
+  }
+
+  burnCard() {
     this.deck.pop();
   }
 }
