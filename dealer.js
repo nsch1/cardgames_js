@@ -25,6 +25,10 @@ function shuffle(array) {
   return array;
 }
 
+function dealCard(place) {
+  place.receiveCard(this.deck.pop)
+}
+
 class Dealer {
   constructor() {
     this.deck = [];
@@ -35,6 +39,8 @@ class Dealer {
   shuffleDeck() {
     shuffle(this.deck);
   }
+
+
 }
 
 let test = new Dealer;
