@@ -26,10 +26,10 @@ console.log(test.field);
 
 player.setChips(100);
 
-console.log(player.chips);
+console.log(player.getChips());
 
 console.log(player.betChips(101));
 
-console.log(player.chips);
+console.log(player.getChips());
 
-player.betChips(80);
+console.log(player.betChips(80));

@@ -14,6 +14,10 @@ class Player {
     this.chips = amount;
   }
 
+  getChips() {
+    return this.chips;
+  }
+
   betChips(amount) {
     if (amount > this.chips) return 'Not enough chips';
     this.chipsInPlay = amount;
