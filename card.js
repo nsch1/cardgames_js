@@ -2,6 +2,7 @@ class Card {
   constructor(suit, rank) {
     this.suit = suit;
     this.rank = rank;
+    this.value = rank;
   }
 
   getSuit() {
@@ -18,6 +19,14 @@ class Card {
       return ranks[this.getRank() - 11];
     } else {
       return this.getRank();
+    }
+  }
+
+  setBlackJackValue() {
+    if (this.rank >= 11 && this.rank < 14) {
+      this.value = 10;
+    } else {
+      this.value = 11;
     }
   }
 }

@@ -25,10 +25,6 @@ function shuffle(array) {
   return array;
 }
 
-function dealCard(place) {
-  place.receiveCard(this.deck.pop());
-}
-
 class Dealer {
   constructor() {
     this.deck = [];
@@ -40,18 +36,22 @@ class Dealer {
     shuffle(this.deck);
   }
 
+  dealCard(place) {
+    place.receiveCard(this.deck.pop());
+  }
+
   dealCards(amount = 1) {
     let currentPlayers = this.currentTable.players
     for (let i = 0; i < amount; i++) {
       for (let p = 0; p < currentPlayers.length; p++) {
-        dealCard.bind(this)(currentPlayers[p]);
+        this.dealCard(currentPlayers[p]);
       }
     }
   }
 
   playCards(amount = 1) {
     for (let i = 0; i < amount; i++) {
-      dealCard.bind(this)(this.currentTable);
+      this.dealCard(this.currentTable);
     }
   }
 
