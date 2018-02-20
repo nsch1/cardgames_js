@@ -18,6 +18,13 @@ class Table {
 /*
 let test = new Table;
 let dealer = test.dealer;
+let player = test.seatPlayer("test");
 
-console.log(test.seatPlayer("test"));
+dealer.currentTable = test;
+
+console.log(player);
+
+dealer.dealCards(2);
+
+console.log(player.hand);
 */

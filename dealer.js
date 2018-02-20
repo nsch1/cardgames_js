@@ -26,18 +26,27 @@ function shuffle(array) {
 }
 
 function dealCard(place) {
-  place.receiveCard(this.deck.pop)
+  place.receiveCard(this.deck.pop());
 }
 
 class Dealer {
   constructor() {
     this.deck = [];
-    this.current_table;
+    this.currentTable;
     fillDeck.bind(this)();
   }
 
   shuffleDeck() {
     shuffle(this.deck);
+  }
+
+  dealCards(amount) {
+    let currentPlayers = this.currentTable.players
+    for (let i = 0; i < amount; i++) {
+      for (let p = 0; p < currentPlayers.length; p++) {
+        dealCard.bind(this)(currentPlayers[p]);
+      }
+    }
   }
 }
 
