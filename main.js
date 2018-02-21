@@ -33,3 +33,5 @@ console.log(player.betChips(101));
 console.log(player.getChips());
 
 console.log(player.betChips(80));
+
+console.log(player.getChips());
